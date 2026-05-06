@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)비에이텍 - 회사소개서(E-Book)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="info-page-body">
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>PDF 문서를 로딩 중입니다... 잠시만 기다려주세요.</p>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-water"></i>
+            (주)비에이텍
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="product.html">주요제품</a></li>
+            <li><a href="equipment.html">보유장비</a></li>
+            <li><a href="sales_history.html">업력</a></li>
+            <li><a href="map.html">오시는 길</a></li>
+            <li><a href="inquiry.html">문의</a></li>
+            <li><a href="information.html">회사소개서(E-Book)</a></li>
+        </ul>
+    </header>
+
+    <div class="flipbook-container">
+        <div class="book-wrapper">
+            <div id="book">
+                <!-- Pages dynamically injected here -->
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="btn-prev" class="ctrl-btn" disabled><i class="fa-solid fa-chevron-left"></i> 이전</button>
+            <span class="page-info">
+                <span id="page-current">0</span> / <span id="page-total">0</span>
+            </span>
+            <button id="btn-next" class="ctrl-btn" disabled>다음 <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">
+                    <i class="fa-solid fa-water"></i> (주)비에이텍
+                </div>
+                <p>워터 펌프 제작, 설치, 수리 전문기업</p>
+            </div>
+            <div class="footer-info">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-user"></i> 대표이사 : 조세연</p>
+                <p><i class="fa-solid fa-phone"></i> TEL : 033-264-9243</p>
+                <p><i class="fa-solid fa-fax"></i> FAX : 033-251-5747</p>
+                <p><i class="fa-solid fa-location-dot"></i> 주소 : 강원특별자치도 춘천시 퇴계공단2길 64</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 (주)비에이텍. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+    <script src="js/flipbook.js"></script>
+</body>
+</html>
